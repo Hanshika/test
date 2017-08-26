@@ -1,0 +1,28 @@
+***** -every minute job will run
+43 **** 43 minute will run
+43 4 ***
+
+cron pattern
+52 16  * * *  4.52 pm
+
+12 hours +4 =16
+
+
+ +------------- minute (0 - 59)
+ ¦ +------------- hour (0 - 23)
+ ¦ ¦ +------------- day of month (1 - 31) 
+ ¦ ¦ ¦ +------------- month (1 - 12) jan-dec
+ ¦ ¦ ¦ ¦ +------------- day of week (0 - 6) (Sunday to Saturday;
+ ¦ ¦ ¦ ¦ ¦                                       7 is also Sunday)
+ ¦ ¦ ¦ ¦ ¦
+ ¦ ¦ ¦ ¦ ¦
+ * * * * *  command to execute
+
+ 23:45 (11:45 PM) every Saturday.
+45 23 * * 6
+
+how you will start jenkins jenkins.exe restart
+start
+ stop
+smoke testing -build level
+sanity testing -release level

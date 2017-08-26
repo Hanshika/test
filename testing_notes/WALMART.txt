@@ -1,0 +1,8 @@
+jira
+tr
+sprints -2-3 weeks
+stories are manually tested
+
+in jenkins jobs we have test cases
+long with smoke test also run
+pr-pull request

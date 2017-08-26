@@ -1,0 +1,9 @@
+we had base class api to call config utils and load properties 
+the config properties holds consumer key , token , secret key for authentication  which is common for all the request
+we had helper class like json parser,constants 
+
+we had excel utils - pass the different data of request, we can read it them from external data sources
+------------------------------------------------------------
+ Rest api automation
+it is maven project where we add ed all the depencies jars releated to the project.here we used rest assureg and json parser and testng to build framework .
+ we had multple utils in our framework . we had config utils where we call and load the properties file so  the properties file hold information about uri, header information , token key secret key, for authetication purpose which is common for all the request so we segrated in kept in the form of properties file where we call in con fig class. we had base class to call config utils . and we had some other utils like helper utils where we can parser json  where can read json and get indiviual data information so instead of each time parsing data we segerated that. we call api and get response and parse the response and start to doing the asssertions .so this breifly about api framework.

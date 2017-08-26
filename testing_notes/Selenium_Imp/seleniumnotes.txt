@@ -1,0 +1,44 @@
+https://seleniumbycharan.wordpress.com/2015/05/31/how-to-read-data-from-excel/
+https://www.kainos.pl/blog/building-test-automation-framework-by-example-2-page-object-pattern/
+http://www.techbeamers.com/implement-page-object-model-pom-with-selenium-and-web-driver-2-0/
+http://artoftesting.com/automationTesting/pageObjectModel.html
+http://seleniumyourself.blogspot.com/2015/04/selenium-webdriver-example-facebook.html
+
+http://renttesters.com/2014/06/17/prepping-for-qa-interview/
+http://www.testrisk.com/2015/03/page-object-patter-for-selenium-test.html
+http://www.tabaolan.com/Selenium-Framework/selenium-automation-framework-page-object-model/
+https://docs.google.com/document/d/1N0sReM81lz523owdfn7igkWNqubZ9he7kIxiPF56ZKc/edit
+http://www.seleniumframework.com/cucumber-jvm-3/implement-page-object-pattern/
+https://seleniumatfingertips.wordpress.com/tag/dynamic-xpath-in-selenium-webdriver/
+http://automationtricks.blogspot.com/2014/07/how-to-use-preceding-sibling-and.html
+http://stackoverflow.com/questions/23543044/how-to-use-xpath-preceding-sibling-correctly
+https://dpastov.blogspot.com/2015/10/preceding-sibling-and-following-signling-xpath.html
+https://www.simple-talk.com/wp-content/uploads/imported/1269-Locators_table_1_0_2.pdf
+http://corejavawithselenium.blogspot.com/
+http://seleniumtutorialpoint.com/2015/01/how-to-write-xpath-expression-in-dynamic-way/
+staic class and instance class
+https://www.linkedin.com/pulse/selenium-real-time-interview-questions-answers-technologies-13600-
+
+String LOCATION =System.getProperty("user.dir")+"\\resources\\drivers";
+	  System.setProperty("webdriver.gecko.driver",LOCATION+"\\geckodriver.exe");
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

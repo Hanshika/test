@@ -1,0 +1,13 @@
+f2 -rename file
+f5-refresh
+ctrl+shift+t -open type in hirecahly
+ctrl+Alt+h-open call hirechaly
+ctrl+shift+f -code formatting
+f6---will stop for debug
+f8- debug mode next line
+alt+shift+r -rename file
+Ctrl+i-   indention format code
+ctrl+shift+o -remove unsused imports
+windows+r -run command
+
+http://www.codejava.net/ides/eclipse/25-eclipse-shortcut-keys-for-code-editing

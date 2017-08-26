@@ -1,0 +1,225 @@
+ 
+HttpClient client = new HttpClient();
+client.BaseAddress = new Uri("http://localhost/yourwebapi");
+
+
+client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+make sure get request to another api i need respond headers in json format
+Make sure your requests ask for the response in JSON using the Accept header like this:
+client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+HttpResponseMessage response = client.GetAsync("api/getobjects").Result;
+if (response.IsSuccessStatusCode)
+{
+    var data = response.Content.ReadAsAsync<IEnumerable<YourClass>>().Result;
+    foreach (var x in data)
+    {
+        //Call your store method and pass in your own object
+    }
+}
+else
+=============
+https://www.apicasystem.com/blog/top-6-challenges-api-testing/
+http://www.qaautomationsimplified.com/api/rest-api-automation-testing-using-apache-httpclient-the-approach/
+
+https://www.mkyong.com/java/apache-httpclient-examples/
+===================================
+
+http://learn-automation.com/how-to-perform-web-services-testing-using-httpclient/
+http://www.baeldung.com/integration-testing-a-rest-api
+http://howtodoinjava.com/apache-commons/jax-rs-restful-client-using-apache-httpclient/
+===========================
+http://helpqaspb.com/restapi.htm
+
+
+
+
+How did you test REST Api in different environment?
+ By using soaupUI pro version we can test Rest Api  in differernt environments.
+1. First we need to create new rest project in soapui
+2. we create test case for application using http methods like get,post,put....
+3. once with test case ,now we can start adding the evirnoments to follow like dev,staging,prod to test api
+4. In soaupui will start do envirnoment configuration ,once done with congif we can see differrent envirnoment in test suite tab 
+5. We can see environments tab in project panel
+6. There we can choose which environment will test.
+	
+
+
+
+
+http://testdetective.com/rest-assured-framework-overview/
+What do you understand by payload in RESTFul?
+Answer : Payload means data which passed inside request body also payload is not request parameters. So only you can do payload in POST  and not in GET and DELTE method
+
+Read more: http://www.java67.com/2015/09/top-10-restful-web-service-interview-questions-answers.html#ixzz4TvVtuZtm
+
+
+
+.Rest automation faremework.
+2.How do you Rest api's.
+3.end -to -end testing using Rest Api from start
+4.multiple api calls code using Rest coding
+5.Arraylist java programs coding
+6.json parasing coding
+
+
+4.multiple api calls code using Rest coding
+
+build thrid party api to connect with current applications
+
+1.to call third party call we can make one api to call another apis
+
+2, we sent the request to server make sure get request need response headers in json format
+
+ Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+HttpResponseMessage response = client.GetAsync("api/getobjects").Result;
+if (response.IsSuccessStatusCode)
+{
+    var data = response.Content.ReadAsAsync<IEnumerable<YourClass>>().Result;
+    foreach (var x in data)
+    {
+        //Call your store method and pass in your own object
+    }
+}
+
+HTTP Method
+
+URL
+
+Action
+
+GET	/api/products	Retrieves all products
+GET	/api/products/5	Retrieves a single product of primary key 5
+POST	/api/products	Adds a new product
+PUT	/api/products/3	Updates a single product of primary key 3
+DELETE	/api/products/7	Deletes a single product of primary key 7
+
+
+
+
+
+How you did Rest Automation in your previous projects?(on whiteboard)
+How was your Rest Automation Framework?(on whiteboard)
+How will you start if rest api endpoint is given to you?
+1. manually will test using plugins postman in google chrome
+2.using soupui tool
+3.programtically by using httpclient and rest assured will  do
+to refer specfiction document
+
+
+Explain the architecture of Rest Automation framework that you worked on?(on whiteboard)
+How did you test REST Api in different environment?
+Tell me about your experience in rest Automation?
+Explain rest framework?
+How was the request for rest?(how you send the data , how do you build your request?)
+
+
+
+post method
+
+HttpClient httpclient = HttpClients.create.build();
+HttpPost post = new HttpPost("http://www.a-domain.com/foo/");
+
+// add header
+post.setHeader("User-Agent", USER_AGENT);
+
+List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
+urlParameters.add(new BasicNameValuePair("sn", "C02G8416DRJM"));
+urlParameters.add(new BasicNameValuePair("cn", ""));
+urlParameters.add(new BasicNameValuePair("locale", ""));
+urlParameters.add(new BasicNameValuePair("caller", ""));
+urlParameters.add(new BasicNameValuePair("num", "12345"));
+
+post.setEntity(new UrlEncodedFormEntity(urlParameters));
+
+HttpResponse response = client.execute(post);
+System.out.println("Response Code : "
+                + response.getStatusLine().getStatusCode());
+
+BufferedReader rd = new BufferedReader(
+        new InputStreamReader(response.getEntity().getContent()));
+
+StringBuffer result = new StringBuffer();
+String line = "";
+while ((line = rd.readLine()) != null) {
+	result.append(line);
+}
+===========================
+
+
+
+@Test post method
+httpclient client =httpclientbuilder.create().build();
+Httppost post=new httppost("url");
+//set header
+post.setHeader("accept","application/json");
+Post.setHeader("Content-type", "application/json");
+
+List<NameValuePair> ko =new arrayList<NameValuePair>(); ///setting the body
+ko.add(new NameValuePair("username","gomathy")); /// set parameter data
+ko.add(new NameValuePair("password","hanshika"));
+Post.setEntity(new UrlEncodedFormEntity(ko));
+httpresponse response= client.exeute(post);
+assert(response.getStatusLine().getStatusCode(), equalTo(200));
+client.close();
+-----------------------------------------------
+post with parsing json
+ String json = "{"id":1,"name":"John"}";
+    StringEntity entity = new StringEntity(json);
+   Post.setEntity(entity);
+
+ Post.setHeader("Accept", "application/json");
+   Post.setHeader("Content-type", "application/json");
+ 
+    HttpResponse response = client.execute(Post);
+    assertThat(response.getStatusLine().getStatusCode(), equalTo(200));
+    client.close();
+---------------------------------------
+get method
+
+httpclient cilent=httpcilentbuilder.create().build();
+htttpget get= new httpget("url"):
+get.addheader("accept","application/json"):
+get.addheader("content-type","application/json"):
+httpresponse response=client.exeute(get);
+s.op("status code",+response.status line().getstatuscode());
+assertEquals(response.getStatusLine().getStatusCode(), equalTo(200));
+client.close();
+--------
+get method parsing json
+jsonobject json=new jsonobject(io.utils.tostring(response.getentity().getcontent()):
+assertequals(1,json.get("")):
+
+
+JSONArray arr=json.getJSONArray("results");
+
+JSONArray arr = json.getJSONArray("results");
+			for(int i=0;i<arr.length();i++){
+				json = arr.getJSONObject(i);
+				//value presence
+				Assert.assertNotNull(json.get("wrapperType"));
+				//key presence
+				Assert.assertTrue(json.has("artistType"));
+			}
+----------------
+
+hint
+get method -no body
+add header
+
+post method --
+set header
+set body={};
+
+
+--------------------
+ObjectMapper class provides functionalities to convert Java objects to matching JSON constructs and vice versa.
+
+post.setHeader("Content-type", "application/json");
+		String APIBODY = "{\"name\":\"hellogomathy\"}";
+		 StringEntity entity = new StringEntity(APIBODY);
+		   post.setEntity(entity);
+
+		
+		//post.setEntity(new StringEntity(APIBODY));
+		
+

@@ -1,0 +1,74 @@
+add  ------  obj.add(1, "Justin");
+get ----- System.out.println(list.get(2));
+remove------- obj.remove("Harry");
+size-------------obj.size
+set-----(2,"X")
+clear---mylistclear
+
+
+leader elements
+
+a leader element which is larger than all the elemnts in the array to its right
+
+
+Start iterating rightmost elemnt keeping track of largest element 
+if a larger elemnt is found then print it and set current leader  to current eleemnt
+note that last eleemnt is leade since therre is no eleemnt to its right
+
+last eleemnt is leader
+
+
+current leader
+
+Use two loops. The outer loop runs from 0 to size – 1 and one by one picks all elements from left to right. 
+The inner loop compares the picked element to all the elements to its right side. 
+If the picked element is greater than all the elements to its right side, then the picked element is the leader.
+
+
+
+perfect number
+6! 1+2+3=6 when you add all the factors of number and  if you get same number then it will be perfect bumber
+28!  1+2+4+7+14
+
+sum -keep calulate values here
+need to find factors
+% moduloar- will checks num is divisble or not  give remainder or not
+if remainder is 0 then only it will be pefect numbver
+
+
+-------
+seco
+
+create two vatable which first one will be store very first large st one 
+second very la
+
+
+
+/* Displaying array list elements */
+	  System.out.println("Currently the array list has following elements:"+obj);
+
+	  /*Add element at the given index*/
+	  obj.add(0, "Rahul");
+	  obj.add(1, "Justin");
+
+	  /*Remove elements from array list like this*/
+	  obj.remove("Chaitanya");
+	  obj.remove("Harry");
+
+	  System.out.println("Current array list is:"+obj);
+
+	  /*Remove element from the given index*/
+	  obj.remove(1);
+
+	  System.out.println("Current array list is:"+obj);
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	
+	  -------for(Map.Entry m:hm.entrySet()){
+			 System.out.println(m.getKey()+ " "+m.getValue());
+		}

@@ -1,0 +1,11 @@
+Quick Test Professional (HP) license tool . its is VB script version 11.53 (UFT-Unified functional Testing)
+QTP an automated functional testing tool that helps testers to perform automated regression testing in order to identify any gaps, errors/defects in contrary to the actual/desired results of the application under test.
+QuickTest Professional, it's way of usage, record and play back of tests, object repository, actions, checkpoints, sync points, parameterization,debugging, test results etc and other related terminologies.
+ QTP works in Windows operating system only.
+
+1.record and playblack
+2.object repository -capture actions stors in the form object
+3.Actions-Actions helps testers to divide scripts into groups of QTP statements called actions
+4.Check points-validation point that comares current value for specified properties
+5.synchronization-Synchronization point is a feature to specify delay time between one step and another of the test script.
+6. debugging-break point

@@ -1,0 +1,21 @@
+MongoDB is an open-source document database (DBMS)and leading NoSQL database. MongoDB is written in C++.
+MongoDB is a cross-platform, document oriented database that provides, high performance, high availability, and easy scalability. MongoDB works on concept of collection and document.
+Any relational database has a typical schema design that shows number of tables and the relationship between these tables. While in MongoDB, there is no concept of relationship.
+it use in big data,data hub, user data management
+What are typical uses for MongoDB?
+Content management systems, mobile applications, gaming, e-commerce, analytics, archiving, and logging.
+its not RDBMS
+
+mongoDB does not support SQL
+sql- oracle,mysql -Rdbms-table
+NoSql-mongodb -collections
+Mondi db data is stored in the form of json style documents
+
+commands
+
+Create database- use databasename
+insert --db.collection_name.insert()
+find()--db.collection_name.find() display all the documents non structure way
+update() -db.collection_name.updat(data)
+remove()--db.collection_name.remove()
+

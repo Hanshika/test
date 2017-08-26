@@ -1,0 +1,469 @@
+
+package Rest.testParserApi;
+import static org.testng.Assert.assertEquals;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.wbl.utils.ExcelUtils;
+
+
+public class ResumeParserApiTest<workbook>{
+	String POST_URI = "http://localhost:9000/api/v1/utils/resumes";	
+	HttpResponse response;
+    HttpClient client;
+    HttpPost postRequest;
+	
+    @BeforeClass
+	public void beforeClass() {
+		client = HttpClientBuilder.create().build();
+		postRequest = new HttpPost(POST_URI);
+		
+	}
+		
+	@DataProvider(name = "postdata")
+	public Object[][] testData() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","post1");		
+	}
+
+	@Test(dataProvider = "postdata")
+	public void apiTest(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			//to-do send different valid file names through testng data provider
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			// to-do log statements instead of print statments
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			// to-do- content type, content length
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+	@DataProvider(name = "differentNamedifferentformat")
+	public Object[][] differentNamedifferentformat() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","multipleFiles");		
+	}
+
+	@Test(dataProvider = "differentNamedifferentformat")
+	public void differentNamedifferentformat(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+	
+	
+	@DataProvider(name = "numericalName")
+	public Object[][] numericalName() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","numericalName");		
+	}
+
+	@Test(dataProvider = "numericalName")
+	public void numericalName(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	@DataProvider(name = "lesserData")
+	public Object[][]lesserData() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","lesserData");		
+	}
+
+	@Test(dataProvider = "lesserData")
+	public void lesserData(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+		
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+
+	@DataProvider(name = "moredata")
+	public Object[][] moredata() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","moredata");		
+	}
+
+	@Test(dataProvider = "moredata")
+	public void moredata(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+				   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+
+	@DataProvider(name = "0kbDatafile")
+	public Object[][] _0kbDatafile() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","0kbDatafile");		
+	}
+
+	@Test(dataProvider = "0kbDatafile")
+	public void _0kbDatafile(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+
+	@DataProvider(name = "noName")
+	public Object[][] noName() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","noName");		
+	}
+
+	@Test(dataProvider = "noName")
+	public void noName(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	@DataProvider(name = "multipleFiles")
+	public Object[][] multipleFiles() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","multipleFiles");		
+	}
+
+	@Test(dataProvider = "multipleFiles")
+	public void multipleFiles(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+	
+	@DataProvider(name = "oneNamedifferentfiles")
+	public Object[][] oneNamedifferentfiles() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","oneNamedifferentfiles");		
+	}
+
+	@Test(dataProvider = "oneNamedifferentfiles")
+	public void oneNamedifferentfiles(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+		
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+		
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	@DataProvider(name = "invalidFormate")
+	public Object[][] invalidFormate() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","invalidFormate");		
+	}
+
+	@Test(dataProvider = "invalidFormate")
+	public void invalidFormate(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+		
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+		
+			   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+		
+	}
+	
+
+	@DataProvider(name = "moreFilesWithSIngleName")
+	public Object[][] moreFilesWithSIngleName() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","morefilesWithSIngleNAme");		
+	}
+
+	@Test(dataProvider = "moreFilesWithSIngleName")
+	public void moreFilesWithSIngleName(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+		
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}	   
+		 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	@DataProvider(name = "noContent")
+	public Object[][] noContent() throws Exception {
+		ExcelUtils excel = new ExcelUtils();
+		return excel.getSimpleExcelData("rest-test.xlsx","noContent");		
+	}
+
+	@Test(dataProvider = "noContent")
+	public void noContent(String path,String filename,String statuscode) throws ClientProtocolException, IOException{
+
+		try{	
+			MultipartEntityBuilder reqEntity = MultipartEntityBuilder.create();
+			File file = new File(path+filename);
+		    reqEntity.addBinaryBody("resume", file);
+			postRequest.setEntity(reqEntity.build());
+			response = client.execute(postRequest);
+			
+			
+			System.out.println("status code:" + response.getStatusLine().getStatusCode());
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			System.out.println("response:" + json.toString()); 
+			assertEquals(statuscode, response.getStatusLine().getStatusCode());
+			}
+			
+	 catch (ClientProtocolException e1) {
+			e1.printStackTrace();
+		}
+			catch (IOException e11) {
+			e11.printStackTrace();
+		}
+		
+		
+	}
+	
+	
+	@Test
+	public void actualContentInResume() {
+		try {
+
+			JSONObject json = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+			
+			JSONArray skillsArray = json.getJSONArray("skills");
+			assertNotNull(skillsArray);
+
+			assertEquals(true, skillsArray.length() >= 1);
+			
+			assertNotNull(json.get("basics"));
+			
+			JSONArray worksArray = json.getJSONArray("work");
+
+			assertNotNull(worksArray);
+			assertEquals(true, worksArray.length() >= 1);
+
+			for (int i = 0; i <= worksArray.length(); i++) {
+
+				JSONObject worksJson = worksArray.getJSONObject(i);
+				assertNotNull(worksJson.get("summary "));
+				assertNotNull(worksJson.get("company"));
+				assertNotNull(worksJson.get("startDate"));
+				assertNotNull(worksJson.get("endDate"));
+				assertNotNull(worksJson.get("Website"));
+			}
+			
+			JSONArray educationsArray = json.getJSONArray("education");
+
+			assertNotNull(educationsArray);
+			assertEquals(true, educationsArray.length() >= 1);
+
+		} catch (NullPointerException e1) {
+			e1.printStackTrace();
+		} catch (IOException e11) {
+			e11.printStackTrace();
+		}
+	}
+
+	private void assertNotNull(Object object) {
+	
+		
+	}
+
+	
+}

@@ -1,0 +1,25 @@
+Find the smallest number from a given array int[] arr ={-2,5,6,7,8}
+Reverse the string such that:
+WALMART = "LAWMTRA";
+
+5)You are given an integer array containing positive numbers and one number is missing. 
+You need to provide optimum solution to find the missing number based on O(n).Sort the array.
+
+
+1.	Write a program to sum the even numbers up to 1000.
+12.	Arrange array in descending order {8,5,3,2,10,11} (on white board)
+•	What will happen if  both numbers are equal{8,5,3,3,10,11}
+
+
+write a program to find count of duplicate numbers in array and print them?
+
+Separate the Leader elements from the given array and put it in new array?
+Given array --- {16,17,4,3,5,2 }
+Out put array --- {17,5,2 }
+
+
+.asked to write 2nd repeated character in a given string?on white board
+
+second repeated character in a given string?
+
+

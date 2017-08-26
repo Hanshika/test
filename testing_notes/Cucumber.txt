@@ -1,0 +1,154 @@
+Cucumber is a testing tool that supports Behavior Driven Development (BDD) framework. It defines application behavior using simple English text, defined by a language called Gherkin.
+Cucumber is written in ruby
+Behavior Driven Development gives us an opportunity to create test scripts from both the developer’s and the customer’s prospective as well. So in the beginning, developers, project managers, QAs, user acceptance testers and the product owner (stockholder), all get together and brainstorm about which test scenarios should be passed in order to call this software/application successful. This way they come up with a set of test scenarios. All these test scripts are in simple English language, so it serves the purpose of documentation also.
+
+
+
+Advantages of Cucumber 
+Cucumber supports different languages like Java.net and Ruby.
+its more readable
+It is free tool
+Plugin in cucumber works faster
+Cucumber supports only web environment
+Quick and easy set up and execution
+Efficient tool for testing
+Style of writing tests allow for easier reuse of code in the tests
+
+prerequiste
+1.selenium dependecy
+2.cucumber dependency tag
+3.junit dependency
+
+You need 2 Files – Features and Step Definition to execute a Cucmber test scenario
+Features file contain high level description of the test scenario in simple language
+Steps Definition file contains the actual code to execute the test scenario in the Features file.
+
+
+So far, we have got an understanding of Cucumber and what it does. It executes the test scripts, which have been defined in the feature file (to be covered in subsequent chapters). The language, in which this executable feature files is written, is known as Gherkin. Gherkin is a plain English text language, which helps the tool - Cucumber to interpret and execute the test scripts.
+
+A feature usually contains a list of scenarios to be tested for that feature. A file in which we store features, description about the features and scenarios to be tested is known as Feature File. We will see more about feature files in the following chapter.
+
+
+Feature - Name of the feature under test.
+
+Description (optional) - Describe about feature under test.
+
+Scenario - What is the test scenario.
+
+Given - Prerequisite before the test steps get executed.
+
+When - Specific condition which should match in order to execute the next step.
+
+Then - What should happen if the condition mentioned in WHEN is satisfied.
+
+
+Given -
+
+It describes the pre-requisite for the test to be executed.
+
+Example - GIVEN I am a Facebook user
+
+When -
+
+It defines the trigger point for any test scenario execution.
+
+Example - WHEN I enter "<username>"
+
+Then -
+
+Then holds the expected result for the test to be executed.
+
+Example - THEN login should be successful.
+
+And -
+
+It provides the logical AND condition between any two statements. AND can be used in conjunction with GIVEN, WHEN and THEN statement.
+
+Example - WHEN I enter my "<username>" AND I enter my "<password>"
+
+But -
+
+It signifies logical OR condition between any two statements. OR can be used in conjunction with GIVEN, WHEN and THEN statement.
+
+Example - THEN login should be successful. BUT home page should not be missing.
+
+Scenario -
+
+Details about the scenario under the test needs to be captured after the keyword “Scenario:”
+
+Example -
+
+Scenario:
+
+GIVEN I am a Facebook user
+
+WHEN I enter my
+
+AND I enter my
+
+THEN login should be successful.
+
+BUT home page should not be missing.
+
+Scenario Outline - (To be covered later)
+
+Examples - (To be covered later)
+
+Background -
+
+Background generally has the instruction on what to setup before each scenario runs. However, it gets executed after “Before” hook (to be covered later). So this is ideal to be used for code when we want to set up the web-browser or we want to establish the database connectivity.
+
+Example -
+
+Background:
+
+Go to Facebook home page.
+Annotaion:
+
+
+
+What are the 2 files required to execute a Cucumber test scenario?
+
+The 2 files required to execute a Cucumber test scenario are
+
+Features ------ test scensario (keywords-gicevn,when,and,then ,but)
+Step Definition---actual code to execute test scenario
+
+Feature file ---Loginpage.feature (extenstion should be .feature)
+
+
+Feature: Login Action
+ 
+Scenario: Successful Login with Valid Credentials
+	Given User is on Home Page
+	When User Navigate to LogIn Page
+	And User enters UserName and Password
+	Then Message displayed Login Successfully
+ 
+Scenario: Successful LogOut
+	When User LogOut from the Application
+	Then Message displayed LogOut Successfully
+
+
+
+
+
+https://sukesh15.gitbooks.io/cucumber-jvm-test-framework-/content/cucumber_-_more_details/data_driven_testing_using_cucumber.html
+
+plugin={"json:target/cucumber.json",pretty:target/cucumber-pretty.txt","usage:target/cucumber-usage.json","juint:target/cucumber-results.xml"}
+format = {"pretty", "html:target/cucumber", "json:target/cucumber-report.json"})
+
+
+Cucumber options
+Dry run----- if it set true then checks all the steps in feature file corresponding to step defintion
+features-the paths of the feature file
+glue--- the path of step defintions
+tags----what @tags mention in featue file should exeuted
+monochrome--- true -console output will be more readable way
+format----all report format way to use
+Strict---true-if the undefined or pending steps are there then cucmber does fails execution it as markes as test failure
+plugin--- set types of format needs to report
+snippet style-----If you want to change the format of cucumber snippets then you can set snippet type in your cucumber options. There are two types of snippets,
+
+1- SnippetType.CAMELCASE
+2- SnippetType.UNDERSCORE

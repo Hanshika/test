@@ -1,0 +1,22 @@
+Using CSS locators, we can also locate elements with sub-strings. Which are really help full when there are dynamically generated ids in webpage
+
+There are there important special characters:
+1. '^' symbol, represents the starting text in a string.
+2. '$' symbol represents the ending text in a string.
+3. '*' symbol represents contains text in a string.
+
+
+attribute and value
+locating child eleemnt
+locating parent eleemnt
+
+
+CSS stands for Cascading Style Sheets, these are used for styling the different elements of an HTML webpage. In the .css files we can locate specific elements of a webpage(.html files) and then style them like - set their font size, width, height etc.
+For locating the web elements to be styled, we use certain rules provided as CSS Selectors. 
+For example, the following statement first locates a web element satisfying the selector pattern - "div#searchBox" and then aligns the text inside it to center.
+
+
+Locators provide a way to access the HTML elements from a web page. In Selenium, we can use locators to perform actions on the text boxes, links, checkboxes and other web elements.
+
+Locators are the basic building blocks of a web page. A web developer must use a proper and consistent locator scheme for a website. Also, a test engineer must choose the correct locator strategy to automate the online workflows.
+

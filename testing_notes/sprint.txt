@@ -1,0 +1,9 @@
+if any user stories changed in middle of sprint ? what will be your approach? or any paramets changed in middle of sprint?
+Answers:::: if it’s something really small, it should be fine. Just make the change.
+It is the responsibility of the Scrum Master to ensure that the Acceptance Criteria for a User Story is not changed by the Product Owner in the middle of a Sprint which means there should not be any change to the user story at first place. If in some rare case, its done, it must be done with the full acceptance of the development team and they must believe that they can complete it in the ongoing sprint.However any change suggested in the middle of a sprint is discouraged unless it’s really important.
+
+This means the team should fully understand the new story and believe that it can be completed by the end of the sprint. If either of the criteria is not satisfied, the story should be pulled from the sprint and revisited during the next backlog grooming or sprint planning.
+
+however small changes which do not adversely impact the sprint are acceptable.
+------------------------
+

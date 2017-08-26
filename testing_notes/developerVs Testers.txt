@@ -1,0 +1,45 @@
+
+Suppose there is an issue with you and developer, how will you resolve it
+1. screen shots and cause for issues , reports A tester should report errors/bugs 
+2. show him read requirement documents
+3.If the developer is not ready to fix the bug, first try to reproduce the bug.Take the screen shots of the bug.Explain him clearly. Even then he is not ready to fix, then discuss the issue with your test lead.
+4.If you want the Developer to accept your defect then  Being a tester you must have the Steps to Reproduce the defect and You should have the Screenshots , Video Captures etc to Prove your defect ...
+%. disuss with test lead or test manager
+
+As far as closing of a defect is concerned .. Only
+ testers have the privilege to Close the defects .. 
+
+
+attach the necessary screen shots, videos and instructions on how to reproduce the bug. If it is a bug with high severity and high priority then the developer just has to find a way to fix it. It is always fun to put the developer in a fix. Your job as a tester is to log the bug along with necessary evidence. It's not your job to worry about how the developer will fix a bug.
+
+
+
+Developer can reject bug if he/she is unable to reproduce. so follow proper step to mention bug along with screen shot attachment. if bug is genuine & in this case developer deny that this is not a bug.  write to mail his/her tL. your tl will discuss with development TL. if they say that is not a bug then take a written sign off from developer end for further if this bug open from client side so u can see the sign off document
+
+The following steps are useful for a tester to prove it as a bug:
+1. Tetser should show in which scenario particular bug occurs
+2. Tester should show the reproducible steps for causing the bug
+3. Tester should show whether the bug occurs by not satisfying the customers requirment or it is developed in the application even though requirement is not specified in the requirement document
+4. Tester should discuss about all the posible ways with the Developer and he should take this discussion to higher authority
+
+
+
+
+
+When testing the application, it’s always better to clear the cookies/cache of the browser unless it needs to be there while testing
+When you are testing the front-end or UI of the application, keep the developer tools window open (generally done by pressing the F12 key) and while the page is loading, see if there are any warnings or errors there. Sometimes I would observe that even though the UI is working fine, there were some warnings on the console
+
+
+
+
+---------
+reasons for failure  at web application 
+When you are testing the front-end or UI of the application, keep the developer tools window open (generally done by pressing the F12 key) and while the page is loading, see if there are any warnings or errors there. Sometimes I would observe that even though the UI is working fine, there were some warnings on the console
+1. database issues like missing db indexes, db connection pool ,code deadlock   (application server hangs)
+2. client side issues ,network problems, routing failures,lack of memory usage,cpu usage, client side bandwidth exceeded,large request/respons eisze
+3.garbage collection ---- caches/cookies are easy way to speed up applications
+4. deployment issues ------ configuration issues mismatch property files,code not deployed by release team,server not started properly after deployment.
+
+
+
+the browser holds network acitvity after js downloads,will check network console will analysis running page

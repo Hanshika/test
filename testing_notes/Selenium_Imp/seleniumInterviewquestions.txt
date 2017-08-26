@@ -1,0 +1,27 @@
+.Why do you use Actions.
+7.What is the use of select class.How do you use it.
+8.How do you access RadioButtons.
+9.How do u check whether particular element is highlighted or not.
+What are the limitations of using Selenium WebDriver.
+What are the differnt locators in WebDriver.
+What is the selenium version you are using?
+What are waits in webdriver?
+How would u find text color yellow  in selenium?
+In what situation you go for xpath?ans) older version of IE which do not support css selector, if css selector is complex
+What is xpath?ans) fins elemnt on document- xml, json, html
+How to find xpath ? ans) firebug, firepath
+Will you modify xpath or copy it directly?
+what is selenium grid and selenium webdriver? where you used?
+disadvantages and challenges using webdriver?
+Selenium: get vs navigate
+close and quit?
+Question on Desired capabilities in Selenium Webdriver
+If there is some element whose locator changes everyday - then how do we locate it in automation code?
+ Identify using  JavaScript functions like “starts-with” or “contains” in our element 
+
+ XPath: //input[contains(@class, 'suggest')].
+XPath: //button[starts-with(@id, 'Submit-')]
+How do you sort the serahc results or find max from results
+some webelement methods- isSelected,isEnabled, getAttribute ,getText
+.Display all drop down option values in a given select element  
+find max priced element in given search 

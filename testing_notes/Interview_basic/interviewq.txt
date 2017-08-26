@@ -1,0 +1,219 @@
+Interview questions
+ 
+what technologies do you have experience on?
+
+
+what framework have use to develop?
+
+What do you mean by data driven?
+ 
+
+how do  you identify object?
+
+which one is good(better) css or xpath?
+
+
+Ans:in my expereience ,performance wise css selectors is much faster than xpath,it provides good balance between structure and attributes, the xpath almost never works on IE broswer OR it is SO slow that it can't be managed. for that reason i prefer the css selectors
+
+
+ 
+
+you use page object right? 
+
+explain what is page object pattern and what are the advantages. 
+
+give me an example on your current application of page object? 
+
+
+you have use page factory
+
+why do we use page factory? 
+Explain. 
+
+if you have a scenario where you have to verify presence of particular element. How can you verify that? 
+
+Is there any method to verify if element is available. 
+
+
+Ans:if(driver.findElements(By.xpath("value")).size() != 0){
+System.out.println("Element is Present");
+}else{
+System.out.println("Element is Absent");
+}
+
+
+
+how do you handle pop ups in selenium web driver? 
+
+alert alets= driver.switchto().alert();
+alert.accept();
+alert.dismis();
+alert.gettaxt();
+alert.sendkeys("HI");
+
+ 
+
+have you used a close window to handle?
+driver.close();-closing current instances
+
+ 
+
+what is the difference between the implicit wait and explicit wait? 
+impict -wait for whole page to locate the eleemnt
+explict wait- wait for particular elemnts is presence or not
+
+
+ 
+
+have you handled exception in web driver? please explain. 
+
+how do you implement? can you give me an example in a particular case?
+Ans:handling try catch exception in test cases so that all the test cases will get passed. I always print error logs and take screenshot on any exception I encounter. for example timeoutexcetpuion occurs in catch block then i will give print logs syas element is not found
+
+        try{
+ 
+            WebElement element = driver.findElement(By.linkText("+ Report Categories"));
+ 
+        }catch (Exception e){
+ 
+			// Printing logs for my report
+ 
+            Log.error("Report Category button element is not found.");
+ 
+			// Taking screenshot for defect reporting
+ 
+			Utils.captureScreenShot();
+ 
+			// After doing my work, now i want to stop my test case
+ 
+            throw(e);
+ 
+        }
+ 
+		// This will return the Element in case of no Exception
+ 
+        return element;
+ 
+
+
+
+
+
+
+How do you find the number of rows and columns in web develop?
+list <webElement> row=driver.findeleements(by.xpath("id")));
+int rowcount =row.size();
+list <webElement> column=driver.findeleements(by.xpath("id")));
+int columncount =column.size();
+
+ 
+
+have you ever done resizing on control page?
+driver.manage.window.resize_to(480, 320)
+  Dimension d = new Dimension(800,480);
+          //Resize current window to the set dimension
+          driver.manage().window().setSize(d);
+
+
+ 
+
+can you name the most commonly used http menthods in REST?
+
+
+get,post,put,delete, 
+what are the difference between post and put?
+post-create resource
+put-update the resource or insert resource
+
+ 
+
+what do you understand by payload? 
+
+Request body of every HTTP message includes request data called as Payload. This part of the message is of interest to the recipient.<POST> doesn’t have any such limit.
+
+Responsepayload- like element presence, value comparisions, data count... 
+in payload asserting for mandatory, optional parameters
+
+
+but generaaly when they say payload- we mean response payload
+
+
+
+  any difference between SOAP and REST? 
+
+
+
+Can you explain what dependency Injection is?
+obj depends on another obj. in the future you want to change object in that scenario we come implement or inject depeency through code by using getter and seeter mechanism or constructors, or interface to acheive this methods
+
+ 
+
+Significance of xml in testNG? 
+
+How do you arrange the tag?
+
+
+
+Is there any way to define the priority of your test? 
+
+
+
+Can you explain the concept soft assertion? And hard assertion? 
+
+
+Whats better testNG or Junit? 
+
+
+
+JAVA questions
+
+Have you used collections in java?
+ 
+
+Can you tell me the implementations?
+(Implementations are the data objects used to store collections, )
+For the Set interface, HashSet is the most commonly used implementation.
+For the List interface, ArrayList is the most commonly used implementation.
+For the Map interface, HashMap is the most commonly used implementation.
+For the Queue interface, LinkedList is the most commonly used implementation.
+For the Deque interface, ArrayDeque is the most commonly used implementation.
+
+
+ 
+
+What is difference between linked list and array list?
+
+
+
+have you used the concept of threading?
+
+
+Thread- processor 
+
+A thread is a lightweight sub process, a smallest unit of processing. It is a separate path of execution.
+
+Threads are independent, if there occurs exception in one thread, it doesn't affect other threads. It shares a common memory area.
+
+Thread life cycle
+new
+runnnable
+waiting
+sleep
+dead end
+
+
+How to create thread
+
+There are two ways to create a thread:
+
+By extending Thread class
+By implementing Runnable interface.
+
+
+Synchronization -one after other thread
+asynchronous-
+
+
+ 
+
+difference between string and string buffer?

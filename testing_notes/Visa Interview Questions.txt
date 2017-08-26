@@ -1,0 +1,38 @@
+VISA INTERVIEW QUESTIONS:	
+1st round:
+1.Tell me about yourself. What are your skill set?
+2.When you are given a webapplication...what are the kinds of testing will you perform on it?
+3.What was your framework like? 
+4.How would you build a framework from scratch,preferably rest webservice?
+5.How would you go about testing a webservice?
+6.What kind of assertions would you do with respect to payload?
+7.Java program-Given an array of numbers - every index in output should have the product of other index numbers.
+8.What are the different application integration styles? -medha
+9.How to approach for change in attributes to the service method in a Webservice ?
+10.What are the major differences you can state while using SOAP or REST, in terms of 
+   applicability as concern?
+   
+2nd Round
+1.Tell me about your work,what have you done in last 4 projects?
+2.What was your application like in the last project? Did you work more on UI automation or were you involved in other applications as well?
+3.What will your approach be when you are asked to start building a framework on webservices?
+4.Are you familiar with agile methodologies?
+5.How big was your team? How long was the sprint?
+6.Say,the developers give you the application in the middle of the sprint,what do you do in the meantime and after the application is given to you?
+7.What is your approach when you are not able to understand a user story or what you have done is not as per the requirement document?
+8.How did you check the logs? Some Unix commands.
+9.How do you do end-to-end testing when an application is given to you?
+10.End to end testing in terms of webservices.
+11.What challenges did you face in UI automation?
+12.What will you do when you have to submit your framework at a particular deadline,say in a day or two and even though your work has not begun?
+13.SQL query: Two tables customer and orders table...where customer id is the foreign key in orders table. Write a query to find the sum of the products bought by a particular 
+customer.
+14.Difference between XML and Json.
+15.What happens when you perform delete method in rest? How would you know that the method has worked?
+16.What kind of authentication did you use?
+17.Are you familiar with RPC,JSON-WSP,XINS,WSCL,WSFL?
+18.How would you test network security in api?
+19.How is security testing done in rest apis and what were the challenges that you faced?
+20.Any questions you would like to ask?
+
+

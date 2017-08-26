@@ -1,0 +1,7 @@
+I have 6 years of experience in both manual and automation testing.So I have worked in different domains too like I worked with UI testing and webservices testing in my previous projects.
+I have automated framework mainly java as a language and selenium webdriver as a tool and in the framework we have used so many tools like testng,maven,jenkins and github..
+And used other libraries like apache poi for data driven testing.
+I have also tested the webservices using soapui tool and also automated them using httpclient .
+And i have a little exposure with mobile testing relating to my 2nd last project like we have just started with automation framework with respect to mobile using Appium.
+I have been working with agile scrum too.
+So this is pretty much overall experience.

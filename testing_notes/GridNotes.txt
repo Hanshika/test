@@ -1,0 +1,19 @@
+ H:\Users\Hanshika\Downloads>     java -jar selenium-server-standalone-2.46.0.jar -role hub   ------ first hub command prompt
+
+java -jar selenium-server-standalone-2.46.0.jar -role node -hub http://vinodh:4444/grid/register -port 5015 ------- first node command prompt
+
+install chromedriver
+ java -Dwebdriver.chrome.driver="H:\Users\Hanshika\Downloads\chromedriver_win32 (1)\chromedriver.exe" -jar selenium-server-standalone-2.46.0.jar -role webdriver -hub http://vinodh:4444/grid/register -port 5018 -browser browserName=chrome,maxInstances=2,maxSession=2
+
+
+java -jar selenium-server-standalone-2.46.0.jar -role node -hub http://vinodh:4444/grid/register -port 5020 ------- second node command prompt
+
+install firefoxdriver
+ java -Dwebdriver.gecko.driver="H:\Users\Hanshika\Downloads\geckodriver-v0.11.1-win64\geckodriver.exe" -jar selenium-server-standalone-2.46.0.jar -role webdriver -hub http://localhost:4444/grid/register -port 5014 -browser browserName=firefox,maxInstances=2,maxSession=3
+
+
+
+
+
+
+

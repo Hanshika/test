@@ -1,0 +1,5 @@
+In TestNG, Parameterized test configuration is very easy while It is very hard to configure Parameterized test in JUnit.
+TestNG support group test but it is not supported in JUnit.
+TestNG has a feature to configure dependency test. Dependency test configuration for software web application is not possible in JUnit.
+TestNG support @BeforeTest, @AfterTest, @BeforeSuite, @AfterSuite, @BeforeGroups, @AfterGroups which are not supported in JUnit.
+Test prioritization, Parallel testing is possible in TestNG. It is not supported by JUnit

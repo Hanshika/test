@@ -1,0 +1,105 @@
+types of testing
+when to automate and when not to automate
+high pritioty and high severity
+equal partinioning and boundary value analysis
+defect llife cycle
+test case s
+defect techniques
+scrum methodlogies (SDLC)
+sprint planning-
+story grooming-story point we follow finocaai series 3, small . 5 medium.11 complex user stories . kickup sprints
+daily scrum-any issues , root blockers issues 
+sprint review-end of sprint give demo to team  and will show off the functional delivery for the sprint
+sprint retrospective- two weeks come acrros in team will discuss concerns  and so that will  and will give feedback to team what have done good in the next sprint above all perspective improvement, and suggestions on bug management process
+
+still will do manual then next sprint  will do automation for previous sprints
+
+
+
+dev- smoke testcases after build
+qa- regression test case
+stage- pritioty test case
+prod- sanity
+
+good defect ?
+ans-if dont allow the check box but it allow to starting  it seems major defects 
+mis matching data
+
+----
+
+Qa evit - test failures , manually it works -how would you handle this situation?
+deployment issue
+configuration issues
+ server level
+------
+
+
+good defect ever found 
+ 
+Generally biggest bug means it depends on the application, domain, product or project...etc.,I can say one bug. If u r working on web application. 1. Type the same URL in 2 browsers 2. so u have 2 similar web pages3. Enter the same data in 2 pages4. Click on Submit5. It should not allow u to submit the same data in to database.6. If u r able to do so, that'll be a big issue.we can say so many like this.......But should be related to your project
+
+
+broken link
+page not found
+
+
+
+maven- surefire- testng.xml mvn clean install,mvn test
+
+devloper vs tester-
+how many test cases to automate or manually
+traceabilty matrix - checking the current project level how many test case are execute , how many test cases are failed. how many test case are pending 
+
+sanity testing - after build  means after the smoke testing - after the minor chanage in code quickly doing sanity testing with small set functionality works with fine details
+smoke testing - after the build smoke testing occurs to test major functionality without going to deeper into the application .
+test coverage- measuring amount of testing performed during program exeution. what you have tested/what you have to test
+entry ciriteria - when going to start test actitvity. begining of testing level
+ exit criteria- given test activyt has been completed or not 
+------
+Agile Methodology
+
+Product Owner - represent end user.
+
+Sprint - duration, ideally 2-3 weeks . bi weekly sprint
+
+Scrum Master - Project Manager
+
+Scrum Team - 7 +/- 2, 4 dev, 2 testers, 1 lead
+
+Product Backlog - Whole set of requirements finalized by Product Owner
+
+Sprint Backlog - sprint requirements chosen from product backlog based on priority for each sprint
+
+User Stories - Set of requirements subdivided among team members/Subset of sprint backlog
+
+Daily Standup Meeting - 15 - 20 mins
+			What you have done so far
+			Any issues that is blocking you from completing the work
+			What you will do today
+
+Sprint Planning Meeting - Happens before sprint starts
+     Finalize what requirements this sprint should have from sprint backlog, estimation, story points
+
+Sprint Review Meeting - Happens at the end of sprint to demo the application developed to entire team/Product review
+
+Sprint Retrospective Meeting - Process review than product review.
+				Did anything go wrong, should we change any process.
+				Make sure not repeat in next sprint so you can save time and resources for next sprint
+
+Release - move application code to production server/go live
+	For every sprint, every week, for every 2 sprints.
+
+Burndown chart -
+Work done each iteration
+Work remaining
+Work done so far
+When we can expect to be done
+
+Product Backlog Meeting - All the backlog(remaining) details will be discussed.
+
+Storypoint - fibonar series 1, 3, 5, 7 9, 11, 13 
+
+sprint burndown
+velocity
+release burn down
+acceptance criteria- application should satisfy to be accepted by end user or customers

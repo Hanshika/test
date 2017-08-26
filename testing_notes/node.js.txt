@@ -1,0 +1,17 @@
+NPM-Node Package Manage
+Its install node package /modules.
+Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine). Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript.
+node helps to run java script outside the browser
+node js=runtime envirnoment+java script libaray jars
+create the config file which helps to get all js frameworks in one go
+
+eg:
+create package .json in the project folder
+add the necessary application like, jquery,angular application save it
+ then exeute in cmd npm install 
+then pull respective applications
+
+advatages of node .js
+1. its fast
+2. it can handle tons of concurrent requests
+3. it written in java script (which means you can use the same code server side and client side)

@@ -1,0 +1,50 @@
+maven- project management tool its build tool.it based on pom.xml
+it manage project build, reporting and docum from central piece of information
+
+
+Clean- after compile the code all the jar files are will be  saved in target folder... using clean command clean all binary and  jar  file will be cleaned
+
+compile ---compile source file and create class file
+
+
+
+mvn clean--- clean old jar files
+mvn compile- compile soucrce code and create class file
+mvn test---surefire reports  test-compile
+Mvn install -compile clasess file and create jar file
+
+
+validate
+compile
+test
+package
+integration test
+verify
+install
+deploy
+
+
+app.java---->app.class
+appTest.java----->AppTest.class
+run tests
+Create jar, war, ear                                        
+
+
+
+Git
+Git config
+git init
+git status
+touch test1.txt
+git add test21.txt
+git commit  -m"by gomathy"
+ mulitple file
+git add *.txt or git add . (add all the current changes)
+
+git remote add origin "http"
+git push -u origin master
+git log
+
+
+
+

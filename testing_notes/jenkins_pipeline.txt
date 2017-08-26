@@ -1,0 +1,24 @@
+
+save in jenkins file the shell script were written in jenkins file under project packse folder to ipush to git repo , after that integrate to jenkins
+
+node{
+stage 'dev'
+echo "'hello there'
+stage 'QA'
+sh'./mybuild.sh'
+stage 'deploy & prod'
+sh './myDeployment.sh'
+
+}
+
+stage checkout build deploy
+
+pipeline plugins
+
+
+planned or unplanned
+
+
+ how to create pipeline, furst we have to pipeline plugins
+ crate new pipeline project
+ and configure the pipline under select pipeline script from scm there we have to give git repo url where we have source code

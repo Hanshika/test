@@ -1,0 +1,63 @@
+https://developer.android.com/studio/command-line/adb.html
+https://developer.android.com/topic/libraries/testing-support-library/index.html
+
+https://github.com/medhawbl/Aug-ClassDocs/blob/master/MobileTesting.docx
+http://richasd.blogspot.in/2014/12/mobile-testing-challenges-strategy.html
+
+
+
+
+What diff challenges have you faced white testing Mobile web app.?
+Mobile application testing requires special test cases and techniques. The wide variety of mobile technologies, platforms, networks and devices presents a challenge when developing efficient strategies to test mobile software.
+A mobile device is much more restricted compared to desktops – the underlying OS typically sandboxes each application and allows very limited inter process access, unless a phone is ‘rooted’. Controlling the UI navigation of a mobile device is harder – in addition to lack of control mentioned in the previous point, mobile UIX response times are harder to predict than desktop equivalents and hence makes screen grab based predictions of pass/fail harder. Mobile devices, by definition are not statically located entities – depending on where the device is, the network may introduce many challenges that completely break down a prior tested use-case The proliferation of different screen sizes and form factors make UI based testing more challenging as well
+
+
+
+https://ftp.mozilla.org/pub/firefox/releases
+xcode on windows:need virtual box
+https://www.youtube.com/watch?v=sb8BdYH4esQ
+
+ipa file foe ios app using xcode6:
+https://www.youtube.com/watch?v=1IULUVV2MV8
+
+apk file with android studio:
+https://www.youtube.com/watch?v=cfxwXz6Xlag
+
+IOS &  appium:
+https://www.youtube.com/watch?v=meU4TzI3KNM
+
+Selenium jenkins:
+
+https://www.youtube.com/watch?v=1e8I3A49ERc
+
+Selenium paralleltesting/grid:
+
+https://www.youtube.com/watch?v=m9fydeEXDXc
+
+Selenium PageObject And PageFactory:
+
+https://www.youtube.com/watch?v=fUSl-WhqymU 
+
+Appium In depth:
+
+http://appium.io/slate/en/master/?java#writing-tests-for-appium
+
+http://appium.io/slate/en/master/?java#automating-mobile-gestures
+http://appium.io/slate/en/master/?java#touchaction
+
+
+
+--------------------Adb commands--------------------------------------
+
+Adb devices
+Adb forward
+Adb kill-server
+Adb start-server
+Adb logcat
+Adb connect
+Adb usb
+Adb push 
+Adb pull
+Adb shellip
+Adb install
+Adb uninstall

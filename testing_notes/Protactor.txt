@@ -1,0 +1,47 @@
+Protractor is an end-to-end test framework for Angular and AngularJS applications.
+Protractor is a NodeJS program which is written in JavaScript and runs with Node to identinfy the web elements in AngularJS applications, and it also uses WebDriver to control the browser with user actions.
+prerequitsit
+1.selenium-browser contol with user actions
+2.NPm(node .js) ---- install protactor in cmd
+3.install protractor ------ webdrver-manage update
+------- webdriver -manage start
+after the install 
+hit the browser http://localhost:4444/wd/hub/static/resource/hub.html) 
+you will actually see the Web driver manager running in the background.
+project structure
+Protractor needs 2 files to run, a spec file and configuration file.
+1. configuration file -its holds spec.js file be placed path location and its talk with selenium server. it supports default chrome browser  (execute  protractorconfig.js)
+2.spec file -where logic come here i.e it holds locators to interact with application (filename_spec.js)
+here we have logic in code 
+describe('Enter GURU99 Name', function() {
+ it('should add a Name as GURU99', function() {
+ browser.get('https://angularjs.org');
+ element(by.model('yourName')).sendKeys('GURU99');
+element.$ ---invoke css selectors 
+  var guru= element(by.xpath('html/body/div[2]/div[1]/div[2]/div[2]/div/h3'));
+expect(guru.getText()).toEqual('Hello GURU99!'); /// asserting here
+
+browser.sleep(5000);
+  });
+});
+syntax
+Describe-
+it-
+browser.get
+element(by.render)
+expect
+
+protractortest.org ---- website
+
+)
+
+
+how protractor works
+
+1. angular js application have some extra attributes like , repeater, model, controller, which is not included in selenium locators
+2.so protactor on the top of selenium can handle and controls those  attribute in angular js application.
+
+
+1. first ,make sure webdriver- manager start
+2.protractor conf.js
+then it will execute chrome browser with fraction of seconds

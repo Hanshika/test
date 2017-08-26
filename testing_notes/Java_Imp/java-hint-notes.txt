@@ -1,0 +1,91 @@
+driver.get
+list<web elemn> values
+int no of items =values.size();
+arraylist<couble> al =new arralist();
+for (int i-0;i<no of items ;i))
+double price =getprice(values.get(i).getText());
+if(price>0){
+a1.add (price);}
+}
+if(a1.size()>0){
+collections.sort(a1);
+collecrtions.reverse(a1);
+sop(:maxium list price is:$" +a1.get(0));
+---------------
+
+list values= int max=0;
+webelemen temp;
+for(oi<values.size()
+web elemr elem=elem.fineleld(priice);
+int price=ele.txt();
+if(price>max){
+tempelem=elem;
+}}
+elem.finddele,m(a).clik;
+
+
+
+webservices
+call the method will have the result of response and then will  pass the request and do it soap ui tool using conditionl goto and groovy scripting 
+if its java then use tesng there will depends on method or
+
+mock webservives
+if the real web services is not ready to use
+
+developing is still progress, 
+as tester needs want to do TDD will do assertions for mock services
+
+
+
+-----------------------------------------------------------
+
+any thing no about implention and just we have only requirement specification ----interface-----plan
+this obj not going to child class in features then interfaces
+
+partialy know about implentaion will go abstract class-------
+object going to be in features then abstract
+
+concrete class-------ready to provide services (fully completed)
+
+abstraction---- when you want hiding implentaion details and showing functionality to the user
+
+String-----immutable.. if the content is fixed and wont change frequently then we should go for string
+String Buffer----if the content is not fixed and keep on changing but thread safety is required then we should go for string buffer.(mutable)thread safe, it is synchronised. its slow
+String Builder-----if the content is not fixed and keep on changing but thread safety is not required then we should go for string builder.(its not thread safe) , it assynchronised . it is faster 
+
+
+
+
+C c =new C():
+if we know exact runtime type of object then we should use this approach
+By using child reference we call both parent and child class methods.
+we can use child reference to hold only for that particulart child class object only
+
+P p =new C()
+
+If we you  dont know exact runtime type of object then we should use this approach.(polymorphism)
+By using parent reference we can call only methods avaialble in parent class and child specific methods we cant call
+we can use parent refreence to hold any child class object
+parent class p
+child class c
+p c=new p(); // here refrence call parent class
+so it will call parent class object to print in console
+
+
+------- within child class
+C ob= new C();;; here it calls child class 
+here olp will b child class o/p
+
+
+
+java 8 features
+
+functional interface- predicate, consumer,binary operator, supplier functions 
+lambda expression-optional for declaration type, optional for curly braces,optional for return keyword, optional parenthesis,
+
+default and static interface -implemntation 
+parallel processor
+new date and time api
+java stream io api =  collections provides bulk of operation like parallel map reduce, performance improvements for hashmap 
+
+among these as qa we used funtional interface, lamabda expression, collections api 

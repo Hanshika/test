@@ -1,0 +1,58 @@
+ iam available immediate
+  provider- doctor /hospital
+ dealing with this patient registration
+scheduling 
+treatment 
+billing
+
+provider- doctors, hospital, lab, clinic , bby health care services
+ claim- request the bsc  to pay bill health care services
+broker- 
+finance - insurance covering for medical expenses
+medicare- senior ciztens or disables people have federal heath insurance
+hipaa - set of rules and regulations should followd in doctors, hospital , health care proviserd and health plan must follow in order to provide the services
+
+ppo and hmo plan - around the networks
+
+
+system tesing- memebers system, finance system, claim system, provider portal
+
+
+providers- login and  view provider details , claim ststus, and memeber details.
+make change request to change name address, phone number 
+  
+broker- login and view details about broker and commision payment
+ make request to change name address, phone number 
+
+Broker commission calculation based on the premium payment details from member system
+
+
+memebers-  memebers enrolled-  my plan, benefits, claims, 
+ benefits- medical, dental, vision, pharmqacy
+my plan- dental ,vision, common copayments, medical plan memebers - memebers in the family will display to cover in the plan
+claims-dental claims, vision claims, pharamacy claims
+details about claims- amount billed payed, newtwork savings, amount blue sheild paid,paitent responsiablity , copay non covered
+
+
+search doctor - doctor type, doctor name, speciality doctor, plan like hmo,ppo,
+
+
+ ui application----
+1. provider
+2.employers
+3.brokers
+4. find the doctor - see which doctors , specialists and hospital are in your networks
+5.login/register
+6.find the plan
+
+under the find the plan we have get a quote module to entroll the health coverage age , size of house hold,house income .
+
+
+compare the plan by entering the zip code , so that which plans are available in your area
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+rest assured --- get method 
+
+String uri="http ://google.com./api/id";
+Response response= given().header("accept","application/json").contenttype(contenttype.TEXT).when().get(uri).then().statuscode(200);
+
+once you got response 
+JSONArray jsonresponse = new JsonArray(response.asString());
+String outputjson = jsonsresponse.getjsonobject(0).getString("key");
+assertequals(outputjson,"value");
+or
+assertequals("key",output.get("value"));
+----------------------------0 
+Post method
+String uri="http";
+String Body="{\"messages\":\"value\"}";
+RequestSpecbuilder builder = new RequestSpecbuilder builder();
+builder.setbody(Body);
+RequestSpecification requestSpec = builder.build();
+Response response = given().header("accept","application/json").contenttype(contenttype.TEXT).when().body(Body).post(uri);
+Assert(200,
+response.statuscode());
+--------------------
+another post method using hashmap
+String uri="http";
+map<string, string> Body =new hashmap<String,string>();
+Body.put("name","value");
+Body.put("location","fremont")
+Response response =given().header("accept","application/json").contenttype(contenttype.TEXT).when().body(Body).post(uri).then().statuscode(201);
+assert(201,response.statuscode());
+---------------------------------
+
